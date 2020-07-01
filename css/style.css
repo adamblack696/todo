@@ -1,0 +1,118 @@
+body {
+	color: #ffffff;
+	background: rgb(236, 246, 255);
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.plan {
+	position: relative;
+	margin-bottom: 35px;
+}
+.plan__form {
+	position: relative;
+	padding: 5px;
+}
+.plan__input {
+	width: 100%;
+	min-height: 35px;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	background: #5698fa;
+	outline: none;
+}
+.plan__input::placeholder {
+	color: #fff;
+	padding: 5px;
+}
+.plan__button {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: none;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #2369ff;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.plan__button::before {
+	content: "";
+	width: 20px;
+	height: 3px;
+	background: #ffffff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.plan__button::after {
+	content: "";
+	width: 3px;
+	height: 20px;
+	background: #ffffff;
+	position: absolute;
+	transform: rotate(90deg);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.plan__button:hover {
+	background: rgb(3, 61, 253);
+}
+.plan-list,.plan-list_done {
+	padding: 5px;
+	position: relative;
+}
+.plan-list_done::before {
+	content: "";
+	width: 50%;
+	height: 1px;
+	background: rgb(170, 170, 170);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -20px;
+}
+.plan-list > ul > li, .plan-list_done > ul > li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(141, 141, 141, 0.3);
+	padding: 5px;
+	width: 100%;
+	min-height: 35px;
+	border-radius: 5px;	
+	margin: auto;
+	margin-bottom: 35px;
+}
+.plan-list__button-remove, .plan-list__button-add {
+	width: 30px;
+	height: 30px;
+	border: 0;
+}
+.plan-list__button-remove {
+	background: url("../img/clear.svg") no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	outline: none;
+}
+.plan-list__button-add {
+	background: url("../img/ok.svg") no-repeat center, rgb(255, 255, 255);
+	background-size: contain;
+	cursor: pointer;
+	outline: none;
+	margin-left: 5px;
+	border-radius: 50%;
+}
+.plan-list_done .plan-list__button-add {
+	background: url("../img/ok.svg") no-repeat center, #83d469;
+	background-size: contain;
+}
