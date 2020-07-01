@@ -4,7 +4,7 @@ const planInput = document.querySelector('.plan__input'),
 			planForm = document.querySelector('.plan__form'),
 			planList = document.querySelector('.plan-list > ul'),
 			planListDone = document.querySelector('.plan-list_done > ul'),
-			todoData = JSON.parse(localStorage.getItem('todoData'));
+			todoData = JSON.parse(localStorage.getItem('todoData')) || [];
 
 const addLocalStorage = () => {
 	const string = JSON.stringify(todoData);
